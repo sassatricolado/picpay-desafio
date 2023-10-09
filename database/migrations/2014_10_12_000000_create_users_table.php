@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->foreignId('role_id')->constrained();
-            $table->decimal('cash', 9, 2);
+            $table->decimal('cash', 9, 2)->default(0.00);
             $table->timestamps();
         });
     }
